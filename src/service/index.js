@@ -1,6 +1,6 @@
 import { generateKey } from "../utils/generateKey";
 
-const url = "https://api.valantis.store:40000";
+const url = "https://api.valantis.store:41000/";
 const key = generateKey()
 
 const headers = {
