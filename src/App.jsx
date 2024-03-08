@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './App.css';
 import { getItems } from './service';
 import Header from './components/Headers';
@@ -8,21 +8,25 @@ function App() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
   const inputRef = useRef();
-  const [currentPage, setCurrentPage] = useState(0); 
+  const [currentPage, setCurrentPage] = useState(0);
+  const [filter, setFilter] = useState('');
 
   const limit = 50;
 
   useEffect(() => {
     setLoading(true);
-  
     fetchItems(1);
   }, []);
 
   const fetchItems = async (page) => {
     try {
+      let params = { offset: (page - 1) * limit, limit: limit };
+      if (filter) {
+        params = { ...params, filter };
+      }
       const response = await getItems({
         action: 'get_ids',
-        params: { offset: (page - 1) * limit, limit: limit },
+        params,
       });
       setData(response);
       setLoading(false);
@@ -34,48 +38,59 @@ function App() {
 
   const handlePageClick = (selectedPage) => {
     setCurrentPage(selectedPage.selected);
-    fetchItems(selectedPage.selected + 1); 
+    fetchItems(selectedPage.selected + 1);
   };
 
-  const handleFilter = () => {
+  const handlePrice = () => {
     setLoading(true);
-    getItems({
-      action: 'filter',
-      params: { price: +inputRef.current.value },
-    })
-      .then((res) => {
-        setData(res);
-      })
-      .finally(() => {
-        setLoading(false);
-      });
+    fetchItems(1);
+  };
+
+  const handleChange = (e) => {
+    setFilter(e.target.value);
   };
 
   return (
     <div>
       <Header />
       <div className='search'>
-        <input ref={inputRef} type='number' placeholder='Please enter price ex:1700' />
-        <button onClick={handleFilter}>Search</button>
+        <select onChange={handleChange} name='filter'>
+          <option value=''>Выберите филтер</option>
+          <option value='price'>По цене</option>
+          <option value='brand'>По бренду</option>
+          <option value='name'>По Названию</option>
+        </select>
+        <input ref={inputRef} type='text' placeholder='Please enter price ex:1700' />
+        <button onClick={handlePrice}>Search</button>
       </div>
       {loading && <h1>Loading...</h1>}
-      <div className='cards'>
-        {data?.map((item) => (
-          <div key={item.id} className='cardsContent'>
-            <h4>{item.brand ?? 'No brand name'}</h4>
-            <p>{item.product}</p>
-            <h6>₽{item.price}</h6>
-            <p>id:{item.id}</p>
-          </div>
-        ))}
-      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>ID#</th>
+            <th>Название Товара</th>
+            <th>Цена</th>
+            <th>Бренд</th>
+          </tr>
+        </thead>
+        <tbody>
+          {data?.map((item) => (
+            <tr key={item.id}>
+              <td>{item.id}</td>
+              <td>{item.product}</td>
+              <td>{item.price}</td>
+              <td>{item.brand ?? 'Нету названия бренда'}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
       <ReactPaginate
         previousLabel={'Previous'}
         nextLabel={'Next'}
         breakLabel={'...'}
-        pageCount={10} 
-        pageRangeDisplayed={2}
-        marginPagesDisplayed={1} 
+        pageCount={160}
+        pageRangeDisplayed={3}
+        marginPagesDisplayed={2}
         onPageChange={handlePageClick}
         containerClassName={'pagination justify-content-center'}
         pageClassName={'page-item'}
@@ -87,7 +102,7 @@ function App() {
         breakClassName={'page-item'}
         breakLinkClassName={'page-link'}
         activeClassName={'active'}
-        forcePage={currentPage} 
+        forcePage={currentPage}
       />
     </div>
   );
