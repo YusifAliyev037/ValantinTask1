@@ -92,14 +92,274 @@ function App() {
           </tr>
         </thead>
         <tbody className='tbody'>
-          {data?.map((item) => (
-            <tr key={item.id}>
-              <td>{item.id}</td>
-              <td>{item.product}</td>
-              <td>{item.price}</td>
-              <td>{item.brand ?? 'Нету названия бренда'}</td>
+          {/* {data?.map((item) => ( */}
+          <tr >
+              <td>1111</td>
+              <td>Gold Ring</td>
+              <td>20$</td>
+              <td>Gucci</td>
+            </tr><tr >
+              <td>1111</td>
+              <td>Gold Ring</td>
+              <td>20$</td>
+              <td>Gucci</td>
+            </tr><tr >
+              <td>1111</td>
+              <td>Gold Ring</td>
+              <td>20$</td>
+              <td>Gucci</td>
+            </tr><tr >
+              <td>1111</td>
+              <td>Gold Ring</td>
+              <td>20$</td>
+              <td>Gucci</td>
+            </tr><tr >
+              <td>1111</td>
+              <td>Gold Ring</td>
+              <td>20$</td>
+              <td>Gucci</td>
+            </tr><tr >
+              <td>1111</td>
+              <td>Gold Ring</td>
+              <td>20$</td>
+              <td>Gucci</td>
+            </tr><tr >
+              <td>1111</td>
+              <td>Gold Ring</td>
+              <td>20$</td>
+              <td>Gucci</td>
+            </tr><tr >
+              <td>1111</td>
+              <td>Gold Ring</td>
+              <td>20$</td>
+              <td>Gucci</td>
+            </tr><tr >
+              <td>1111</td>
+              <td>Gold Ring</td>
+              <td>20$</td>
+              <td>Gucci</td>
+            </tr><tr >
+              <td>1111</td>
+              <td>Gold Ring</td>
+              <td>20$</td>
+              <td>Gucci</td>
+            </tr><tr >
+              <td>1111</td>
+              <td>Gold Ring</td>
+              <td>20$</td>
+              <td>Gucci</td>
+            </tr><tr >
+              <td>1111</td>
+              <td>Gold Ring</td>
+              <td>20$</td>
+              <td>Gucci</td>
+            </tr><tr >
+              <td>1111</td>
+              <td>Gold Ring</td>
+              <td>20$</td>
+              <td>Gucci</td>
+            </tr><tr >
+              <td>1111</td>
+              <td>Gold Ring</td>
+              <td>20$</td>
+              <td>Gucci</td>
+            </tr><tr >
+              <td>1111</td>
+              <td>Gold Ring</td>
+              <td>20$</td>
+              <td>Gucci</td>
+            </tr><tr >
+              <td>1111</td>
+              <td>Gold Ring</td>
+              <td>20$</td>
+              <td>Gucci</td>
+            </tr><tr >
+              <td>1111</td>
+              <td>Gold Ring</td>
+              <td>20$</td>
+              <td>Gucci</td>
+            </tr><tr >
+              <td>1111</td>
+              <td>Gold Ring</td>
+              <td>20$</td>
+              <td>Gucci</td>
+            </tr><tr >
+              <td>1111</td>
+              <td>Gold Ring</td>
+              <td>20$</td>
+              <td>Gucci</td>
+            </tr><tr >
+              <td>1111</td>
+              <td>Gold Ring</td>
+              <td>20$</td>
+              <td>Gucci</td>
+            </tr><tr >
+              <td>1111</td>
+              <td>Gold Ring</td>
+              <td>20$</td>
+              <td>Gucci</td>
+            </tr><tr >
+              <td>1111</td>
+              <td>Gold Ring</td>
+              <td>20$</td>
+              <td>Gucci</td>
+            </tr><tr >
+              <td>1111</td>
+              <td>Gold Ring</td>
+              <td>20$</td>
+              <td>Gucci</td>
+            </tr><tr >
+              <td>1111</td>
+              <td>Gold Ring</td>
+              <td>20$</td>
+              <td>Gucci</td>
+            </tr><tr >
+              <td>1111</td>
+              <td>Gold Ring</td>
+              <td>20$</td>
+              <td>Gucci</td>
+            </tr><tr >
+              <td>1111</td>
+              <td>Gold Ring</td>
+              <td>20$</td>
+              <td>Gucci</td>
+            </tr><tr >
+              <td>1111</td>
+              <td>Gold Ring</td>
+              <td>20$</td>
+              <td>Gucci</td>
+            </tr><tr >
+              <td>1111</td>
+              <td>Gold Ring</td>
+              <td>20$</td>
+              <td>Gucci</td>
+            </tr><tr >
+              <td>1111</td>
+              <td>Gold Ring</td>
+              <td>20$</td>
+              <td>Gucci</td>
+            </tr><tr >
+              <td>1111</td>
+              <td>Gold Ring</td>
+              <td>20$</td>
+              <td>Gucci</td>
+            </tr><tr >
+              <td>1111</td>
+              <td>Gold Ring</td>
+              <td>20$</td>
+              <td>Gucci</td>
+            </tr><tr >
+              <td>1111</td>
+              <td>Gold Ring</td>
+              <td>20$</td>
+              <td>Gucci</td>
+            </tr><tr >
+              <td>1111</td>
+              <td>Gold Ring</td>
+              <td>20$</td>
+              <td>Gucci</td>
+            </tr><tr >
+              <td>1111</td>
+              <td>Gold Ring</td>
+              <td>20$</td>
+              <td>Gucci</td>
+            </tr><tr >
+              <td>1111</td>
+              <td>Gold Ring</td>
+              <td>20$</td>
+              <td>Gucci</td>
+            </tr><tr >
+              <td>1111</td>
+              <td>Gold Ring</td>
+              <td>20$</td>
+              <td>Gucci</td>
+            </tr><tr >
+              <td>1111</td>
+              <td>Gold Ring</td>
+              <td>20$</td>
+              <td>Gucci</td>
+            </tr><tr >
+              <td>1111</td>
+              <td>Gold Ring</td>
+              <td>20$</td>
+              <td>Gucci</td>
+            </tr><tr >
+              <td>1111</td>
+              <td>Gold Ring</td>
+              <td>20$</td>
+              <td>Gucci</td>
+            </tr><tr >
+              <td>1111</td>
+              <td>Gold Ring</td>
+              <td>20$</td>
+              <td>Gucci</td>
+            </tr><tr >
+              <td>1111</td>
+              <td>Gold Ring</td>
+              <td>20$</td>
+              <td>Gucci</td>
+            </tr><tr >
+              <td>1111</td>
+              <td>Gold Ring</td>
+              <td>20$</td>
+              <td>Gucci</td>
+            </tr><tr >
+              <td>1111</td>
+              <td>Gold Ring</td>
+              <td>20$</td>
+              <td>Gucci</td>
+            </tr><tr >
+              <td>1111</td>
+              <td>Gold Ring</td>
+              <td>20$</td>
+              <td>Gucci</td>
+            </tr><tr >
+              <td>1111</td>
+              <td>Gold Ring</td>
+              <td>20$</td>
+              <td>Gucci</td>
+            </tr><tr >
+              <td>1111</td>
+              <td>Gold Ring</td>
+              <td>20$</td>
+              <td>Gucci</td>
+            </tr><tr >
+              <td>1111</td>
+              <td>Gold Ring</td>
+              <td>20$</td>
+              <td>Gucci</td>
+            </tr><tr >
+              <td>1111</td>
+              <td>Gold Ring</td>
+              <td>20$</td>
+              <td>Gucci</td>
+            </tr><tr >
+              <td>1111</td>
+              <td>Gold Ring</td>
+              <td>20$</td>
+              <td>Gucci</td>
+            </tr><tr >
+              <td>1111</td>
+              <td>Gold Ring</td>
+              <td>20$</td>
+              <td>Gucci</td>
+            </tr><tr >
+              <td>1111</td>
+              <td>Gold Ring</td>
+              <td>20$</td>
+              <td>Gucci</td>
+            </tr><tr >
+              <td>1111</td>
+              <td>Gold Ring</td>
+              <td>20$</td>
+              <td>Gucci</td>
+            </tr><tr >
+              <td>1111</td>
+              <td>Gold Ring</td>
+              <td>20$</td>
+              <td>Gucci</td>
             </tr>
-          ))}
+          {/* // ))} */}
         </tbody>
       </table>
 
@@ -120,7 +380,7 @@ function App() {
         nextLinkClassName={'page-link'}
         breakClassName={'page-item'}
         breakLinkClassName={'page-link'}
-        activeClassName={'active'}
+        activeClassName={'active danger'}
         forcePage={currentPage} 
       />
     </div>
